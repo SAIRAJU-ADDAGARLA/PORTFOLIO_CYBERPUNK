@@ -5,7 +5,7 @@ import dynamic from 'next/dynamic';
 import { gsap } from 'gsap';
 
 // Dynamically import WebGL canvas with ssr disabled to prevent Next.js hydration mismatches
-const HeroCanvas = dynamic(() => import('./HeroCanvas'), { ssr: false });
+const Hyperspeed = dynamic(() => import('./Hyperspeed'), { ssr: false });
 
 export default function Hero() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -104,8 +104,8 @@ export default function Hero() {
       id="home"
       className="relative w-full min-h-screen flex flex-col justify-center items-center px-4 overflow-hidden border-b border-warm-white/10"
     >
-      {/* 3D WebGL liquid metal background canvas */}
-      <HeroCanvas />
+      {/* 3D WebGL space speed tunnel background canvas */}
+      <Hyperspeed />
 
       {/* Decorative vertical Japanese typeset border layout */}
       <div 
